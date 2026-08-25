@@ -5,6 +5,15 @@
     "sanity:typegen": {
       "cache": false
     },
+    "studio#sanity:typegen": {
+      "outputs": ["../sanity.schema.json"],
+      "cache": false
+    },
+    "frontend#sanity:typegen": {
+      "dependsOn": ["studio#sanity:typegen"],
+      "outputs": [],
+      "cache": false
+    },
     "dev": {
       "dependsOn": ["sanity:typegen"],
       "cache": false,
